@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <title>Unstoppable 7</title>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+      <style>
+         body {font-family: "Lato", sans-serif}
+         .myslides {display: none}
+         table { border-collapse: collapse; width: 100%; border: 1px solid #ddd; }
+         th, td { text-align: left; padding: 16px; }
+         .mySlides.w3-display-container.w3-center > img { height: 100vh; }
+         .accordion .accordion-item {
+            border-bottom: 1px solid #e5e5e5;
+         }
+         .accordion .accordion-item button[aria-expanded='true'] {
+            border-bottom: 1px solid #03b5d2;
+         }
+         .accordion button {
+            position: relative;
+            display: block;
+            text-align: left;
+            width: 100%;
+            padding: 1em 0;
+            color: #7288a2;
+            font-size: 1.15rem;
+            font-weight: 400;
+            border: none;
+            background: none;
+            outline: none;
+         }
+         .accordion button:hover, .accordion button:focus {
+            cursor: pointer;
+            color: #03b5d2;
+         }
+         .accordion button:hover::after, .accordion button:focus::after {
+            cursor: pointer;
+            color: #03b5d2;
+            border: 1px solid #03b5d2;
+         }
+         .accordion button .accordion-title {
+            padding: 1em 1.5em 1em 0;
+         }
+         .accordion button .icon {
+            display: inline-block;
+            position: absolute;
+            top: 18px;
+            right: 0;
+            width: 22px;
+            height: 22px;
+            border: 1px solid;
+            border-radius: 22px;
+         }
+         .accordion button .icon::before {
+            display: block;
+            position: absolute;
+            content: '';
+            top: 9px;
+            left: 5px;
+            width: 10px;
+            height: 2px;
+            background: currentColor;
+         }
+         .accordion button .icon::after {
+            display: block;
+            position: absolute;
+            content: '';
+            top: 5px;
+            left: 9px;
+            width: 2px;
+            height: 10px;
+            background: currentColor;
+         }
+         .accordion button[aria-expanded='true'] {
+            color: #03b5d2;
+         }
+         .accordion button[aria-expanded='true'] .icon::after {
+            width: 0;
+         }
+         .accordion button[aria-expanded='true'] + .accordion-content {
+            opacity: 1;
+            max-height: 9em;
+            transition: all 200ms linear;
+            will-change: opacity, max-height;
+         }
+         .accordion .accordion-content {
+            opacity: 0;
+            max-height: 0;
+            overflow: hidden;
+            transition: opacity 200ms linear, max-height 200ms linear;
+            will-change: opacity, max-height;
+         }
+         .accordion .accordion-content p {
+            font-size: 1rem;
+            font-weight: 300;
+            margin: 2em 0;
+         }
+      </style>
+   </head>
+   <body>
+      <!-- Navbar -->
+      <div class="w3-top">
+         <div class="w3-bar w3-black w3-card">
+            <a class="w3-bar-item w3-button w3-padding-large w3-hide-medium w3-hide-large w3-right" href="javascript:void(0)" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
+            <a href="#" class="w3-bar-item w3-button w3-padding-large">HOME</a>
+            <a href="#outline" class="w3-bar-item w3-button w3-padding-large w3-hide-small">OUTLINE</a>
+            <a href="#faq" class="w3-bar-item w3-button w3-padding-large w3-hide-small">FAQ</a>
+            <a href="#social media" class="w3-bar-item w3-button w3-padding-large w3-hide-small">SOCIAL MEDIA</a>
+            <a href="#member" class="w3-bar-item w3-button w3-padding-large w3-hide-small">MEMBER</a>
+         </div>
+      </div>
+
+      <!-- Navbar on small screens (remove the onclick attribute if you want the navbar to always show on top of the content when clicking on the links) -->
+      <div id="navDemo" class="w3-bar-block w3-black w3-hide w3-hide-large w3-hide-medium w3-top" style="margin-top:46px">
+         <a href="#outline" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">OUTLINE</a>
+         <a href="#faq" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">FAQ</a>
+         <a href="#social media" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">SOCIAL MEDIA</a>
+         <a href="#member" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">MEMBER</a>
+      </div>
+
+      <!-- Page content -->
+      <div class="w3-content" style="max-width:2000px;margin-top:46px">
+      <!-- Automatic Slideshow Images -->
+      <div class="mySlides w3-display-container w3-center">
+         <img src="Group 7_LL Q2 WEBSITE BG.png" style="width:100%">
+      </div>
+      <div class="mySlides w3-display-container w3-center">
+         <img src="Landing Page (2).jpg" style="width:100%">
+      </div>
+     
+
+      <!-- The Band Section -->
+      <div class="w3-container w3-content w3-center w3-padding-64" style="max-width:800px" id="outline">
+         <h2 class="w3-wide">Outline of the Stream</h2>
+         <table class="center">
+            <tr>
+               <th>Topic</th>
+               <th>Time Allotment (mins) </th>
+               <th>Screen</th>
+               <th>Materials</th>
+            </tr>
+            <tr>
+               <td>Introduction</td>
+               <td>1-3 mins.</td>
+               <td></td>
+               <td>High-quality camera</td>
+            </tr>
+            <tr>
+               <td>Instruction/Mechanics</td>
+               <td>5 mins.</td>
+               <td></td>
+               <td>High-quality microphone</td>
+            </tr>
+            <tr>
+               <td>Content/What its about</td>
+               <td>5 mins.</td>
+               <td>video</td>
+               <td>Green screen</td>
+            </tr>
+            <tr>
+               <td>Pros and Cons of the Game/Topic</td>
+               <td>7 mins.</td>
+               <td></td>
+               <td>Footage of the Games</td>
+            </tr>
+            <tr>
+               <td>Short review</td>
+               <td>3 mins.</td>
+               <td></td>
+               <td>Face cam</td>
+            </tr>
+            <tr>
+               <td>End Credits</td>
+               <td>1-2 mins.</td>
+               <td></td>
+               <td></td>
+            </tr>
+            <tr>
+               <td>Total Duration</td>
+               <td>10-25 mins.</td>
+            </tr>
+         </table>
+      </div>
+
+      <!-- The Tour Section -->
+      <div class="w3-black" id="faq">
+         <div class="w3-container w3-content w3-padding-64" style="max-width:800px">
+            <div class="w3-black" id="faq">
+               <div class="w3-container w3-content w3-padding-64" style="max-width:800px">
+                  <h2 class="w3-wide w3-center">FAQ</h2>
+                  <div class="container">
+                    <div class="accordion">
+                      <div class="accordion-item">
+                        <button id="accordion-button-1" aria-expanded="false"><span class="accordion-title">How long should you stream?</span><span class="icon" aria-hidden="true"></span></button>
+                        <div class="accordion-content">
+                          <p>20-30 mins</p>
+                        </div>
+                      </div>
+                      <div class="accordion-item">
+                        <button id="accordion-button-2" aria-expanded="false"><span class="accordion-title">What do you want to happen in your stream during the duration you set?</span><span class="icon" aria-hidden="true"></span></button>
+                        <div class="accordion-content">
+                          <p>To entertain the viewers and have some fun while playing the game.</p>
+                        </div>
+                      </div>
+                      <div class="accordion-item">
+                        <button id="accordion-button-3" aria-expanded="false"><span class="accordion-title">What is your content?</span><span class="icon" aria-hidden="true"></span></button>
+                        <div class="accordion-content">
+                          <p> About gaming</p>
+                        </div>
+                      </div>
+                      <div class="accordion-item">
+                        <button id="accordion-button-4" aria-expanded="false"><span class="accordion-title">How do you want your content to run in your stream?</span><span class="icon" aria-hidden="true"></span></button>
+                        <div class="accordion-content">
+                          <p>Our content will be the main show of our stream, where we will focus on
+                           playing the game chosen with our genuine reactions and experiences to
+                           enhance viewer entertainment.</p>
+                        </div>
+                     </div>
+                      <div class="accordion-item">
+                        <button id="accordion-button-5" aria-expanded="false"><span class="accordion-title">Will you hold discussions?</span><span class="icon" aria-hidden="true"></span></button>
+                        <div class="accordion-content">
+                          <p>We will hold short discussions on the background of the game chosen.</p>
+                        </div>
+                       </div> 
+                        <div class="accordion-item">
+                           <button id="accordion-button-5" aria-expanded="false"><span class="accordion-title">Will you talk to your viewers while you stream? What are the topics you will talk
+                              about?</span><span class="icon" aria-hidden="true"></span></button>
+                           <div class="accordion-content">
+                             <p>Yes, to make it entertaining for the viewers and for them to not feel bored.
+                              We will talk about some topics related to our content and we will also answer
+                              some of their questions related to the game.</p>
+                           </div>
+                      </div>
+                      <div class="accordion-item">
+                        <button id="accordion-button-5" aria-expanded="false"><span class="accordion-title">Will you change your content in the middle of the stream? If yes, what are you
+                           planning to replace it with?</span><span class="icon" aria-hidden="true"></span></button>
+                        <div class="accordion-content">
+                          <p>No</p>
+                        </div>
+                   </div>
+                   <div class="accordion-item">
+                     <button id="accordion-button-5" aria-expanded="false"><span class="accordion-title">What are the ways you will interact with the viewers?</span><span class="icon" aria-hidden="true"></span></button>
+                     <div class="accordion-content">
+                       <p>We will interact with the viewers by answering their questions in the comment
+                        section or chatbox.</p>
+                     </div>
+                </div>
+                <div class="accordion-item">
+                  <button id="accordion-button-5" aria-expanded="false"><span class="accordion-title">Will you be using your audio for the whole duration?</span><span class="icon" aria-hidden="true"></span></button>
+                  <div class="accordion-content">
+                    <p>We will be using cute lively but chill non-copyrighted music, therefore the
+                     music will not overpower our stream.</p>
+                  </div>
+             </div>
+             <div class="accordion-item">
+               <button id="accordion-button-5" aria-expanded="false"><span class="accordion-title">What will appear on your screen for the whole duration of your stream?</span></span><span class="icon" aria-hidden="true"></span></button>
+               <div class="accordion-content">
+                 <p>The screen of the game we’re playing.</p>
+               </div>
+          </div>
+          <div class="accordion-item">
+            <button id="accordion-button-5" aria-expanded="false"><span class="accordion-title">Will you change your overlays every hour?</span></span><span class="icon" aria-hidden="true"></span></button>
+            <div class="accordion-content">
+              <p>No</p>
+            </div>
+       </div>
+       <div class="accordion-item">
+         <button id="accordion-button-5" aria-expanded="false"><span class="accordion-title">Will you have a break? How long will that take?</span></span><span class="icon" aria-hidden="true"></span></button>
+         <div class="accordion-content">
+           <p>At least 5 mins</p>
+         </div>
+    </div>
+    <div class="accordion-item">
+      <button id="accordion-button-5" aria-expanded="false"><span class="accordion-title">Is there a video you want to play while you are streaming? What are those? Do you
+         own the video?</span></span><span class="icon" aria-hidden="true"></span></button>
+      <div class="accordion-content">
+        <p>If not, does it follow the Digital Millennium Copyright Act (DMCA) guidelines?
+         Mostly music tracks from videos like movies or free soundtracks.</p>
+      </div>
+ </div>
+                    </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+
+      <!-- The Contact Section -->
+      <div class="w3-container w3-content w3-padding-64" style="max-width:800px" id="social media">
+         <h2 class="w3-wide w3-center">Social Media</h2>
+         <br>
+         <video style="width: 100%;" controls>
+            <source src="Group 7_Promotional Video.mp4" type="video/mp4">
+            Your browser does not support HTML video.
+          </video>
+         <br><br>
+         <!-- lagay link dito  -->
+         <a href="https://www.facebook.com/profile.php?id=100088311476534&mibextid=ZbWKwL
+         "> <svg fill="#000000" xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 30 30" width="30px" height="30px">    <path d="M24,4H6C4.895,4,4,4.895,4,6v18c0,1.105,0.895,2,2,2h10v-9h-3v-3h3v-1.611C16,9.339,17.486,8,20.021,8 c1.214,0,1.856,0.09,2.16,0.131V11h-1.729C19.376,11,19,11.568,19,12.718V14h3.154l-0.428,3H19v9h5c1.105,0,2-0.895,2-2V6 C26,4.895,25.104,4,24,4z"/></svg></a>
+         <!-- lagay link dito  -->
+         <a href="https://instagram.com/unstoppableseven_?igshid=NDk5N2NlZjQ=
+         "><svg fill="#000000" xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 30 30" width="30px" height="30px">    <path d="M 9.9980469 3 C 6.1390469 3 3 6.1419531 3 10.001953 L 3 20.001953 C 3 23.860953 6.1419531 27 10.001953 27 L 20.001953 27 C 23.860953 27 27 23.858047 27 19.998047 L 27 9.9980469 C 27 6.1390469 23.858047 3 19.998047 3 L 9.9980469 3 z M 22 7 C 22.552 7 23 7.448 23 8 C 23 8.552 22.552 9 22 9 C 21.448 9 21 8.552 21 8 C 21 7.448 21.448 7 22 7 z M 15 9 C 18.309 9 21 11.691 21 15 C 21 18.309 18.309 21 15 21 C 11.691 21 9 18.309 9 15 C 9 11.691 11.691 9 15 9 z M 15 11 A 4 4 0 0 0 11 15 A 4 4 0 0 0 15 19 A 4 4 0 0 0 19 15 A 4 4 0 0 0 15 11 z"/></svg></a>
+         <!-- lagay link dito  -->
+         <a href="https://www.tiktok.com/@unstoppableseven_?_t=8Y9BpROdB2n&_r=1
+         "><svg fill="#000000" xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 30 30" width="30px" height="30px"><path d="M24,4H6C4.895,4,4,4.895,4,6v18c0,1.105,0.895,2,2,2h18c1.105,0,2-0.895,2-2V6C26,4.895,25.104,4,24,4z M22.689,13.474 c-0.13,0.012-0.261,0.02-0.393,0.02c-1.495,0-2.809-0.768-3.574-1.931c0,3.049,0,6.519,0,6.577c0,2.685-2.177,4.861-4.861,4.861 C11.177,23,9,20.823,9,18.139c0-2.685,2.177-4.861,4.861-4.861c0.102,0,0.201,0.009,0.3,0.015v2.396c-0.1-0.012-0.197-0.03-0.3-0.03 c-1.37,0-2.481,1.111-2.481,2.481s1.11,2.481,2.481,2.481c1.371,0,2.581-1.08,2.581-2.45c0-0.055,0.024-11.17,0.024-11.17h2.289 c0.215,2.047,1.868,3.663,3.934,3.811V13.474z"/></svg></a>
+      </div>
+
+      <div class="w3-black w3-padding-64"  style="padding-left: 20%; padding-right: 20%;">
+         <div class="w3-row" style="display: flex; justify-content: center; flex-wrap: wrap;"> 
+            <div class="w3-col m3" style="display: flex;flex-wrap: wrap;flex-direction: column;align-items: center;">
+               <img src="pasted image 0.png" class="w3-round" alt="pasted image" style="width:100%; height: 350px; object-fit: cover; padding: 10px;">
+            </div>
+            <div class="w3-col m3" style="display: flex;flex-wrap: wrap;flex-direction: column;align-items: center;">
+               <img src="2.png" class="w3-round" alt="2" style="width:100%; height: 350px;  padding: 10px;" >
+            </div>
+            <div class="w3-col m3" style="display: flex;flex-wrap: wrap;flex-direction: column;align-items: center;">
+               <img src="3.gif" class="w3-round" alt="3" style="width:100%; height: 350px; padding: 10px;">
+            </div>
+            
+         </div>
+         </div>  
+
+      <!--- The member section-->
+      <div class="w3-padding-64"  style="padding-left: 20%; padding-right: 20%;">
+         <div class="w3-container w3-content w3-center" style="max-width:800px" id="member">
+            <h1>MEMBERS
+            </h1>
+         </div>
+         <div class="w3-row" style="display: flex; justify-content: center; flex-wrap: wrap;"> 
+            <div class="w3-col m3" style="display: flex;flex-wrap: wrap;flex-direction: column;align-items: center;">
+               <img src="MIAN.jpg" class="w3-round w3-margin-bottom" alt="Mian" style="width:100%; height: 224px; border-radius: 174px; object-fit: cover; padding: 10px;">
+               <p>Mian Claudine Laqui</p>
+            </div>
+            <div class="w3-col m3" style="display: flex;flex-wrap: wrap;flex-direction: column;align-items: center;">
+               <img src="B12_Hornilla_Alyza Nicole_E-Excellence-9-7.jpg" class="w3-round w3-margin-bottom" alt="Alyza" style="width:100%; height: 224px; border-radius: 174px; object-fit: cover; padding: 10px; " >
+               <p>Alyza Nicole Hornilla</p>
+            </div>
+            <div class="w3-col m3" style="display: flex;flex-wrap: wrap;flex-direction: column;align-items: center;">
+               <img src="GARDIANO.JPG" class="w3-round" alt="Gardiano" style="width:100%; height: 224px; border-radius: 174px; object-fit: cover; padding: 10px;">
+               <p>Kate Darelle Gardiano</p>
+            </div>
+            <div class="w3-col m3" style="display: flex;flex-wrap: wrap;flex-direction: column;align-items: center;">
+               <img src="Gasco.JPG" class="w3-round w3-margin-bottom" alt="Shin" style="width:100%; height: 224px; border-radius: 174px; object-fit: cover; padding: 10px;">
+               <p>Shinmei Risha Gasco</p>
+            </div>
+         </div>
+
+         <div class="w3-row" style="display: flex; justify-content: center; flex-wrap: wrap;">
+            <div class="w3-col m3" style="display: flex;flex-wrap: wrap;flex-direction: column;align-items: center;">
+               <img src="Cheska.jpg" class="w3-round w3-margin-bottom" alt="Cheska" style="width:100%; height: 224px; border-radius: 174px; object-fit: cover; padding: 10px;">
+               <p>Cheskaneal K. Laja</p>
+            </div>
+            <div class="w3-col m3" style="display: flex;flex-wrap: wrap;flex-direction: column;align-items: center;">
+               <img src="Bianca Blaise P. Lazibal.jpg" class="w3-round" alt="Bianca" style="width:100%; height: 224px; border-radius: 174px; object-fit: cover; padding: 10px;">
+               <p>Bianca Blaise Lazibal</p>
+            </div>
+            <div class="w3-col m3" style="display: flex;flex-wrap: wrap;flex-direction: column;align-items: center;">
+               <img src="Leanne T. Basa.JPG" class="center" alt="Leanne" style="width:100%; height: 224px; border-radius: 174px; object-fit: cover; padding: 10px;">
+               <p>Leanne Basa</p>
+            </div>
+            <br>
+         </div>
+      </div>
+    
+      <!-- Footer -->
+      <footer class="w3-container w3-padding-24 w3-center w3-opacity w3-light-grey w3-xlarge">
+         <p class="w3-medium">Unstoppable 7</p>
+      </footer>
+      <script>
+         // Automatic Slideshow - change image every 4 seconds
+         var myIndex = 0;
+         carousel();
+         
+         function carousel() {
+           var i;
+           var x = document.getElementsByClassName("mySlides");
+           for (i = 0; i < x.length; i++) {
+             x[i].style.display = "none";  
+           }
+           myIndex++;
+           if (myIndex > x.length) {myIndex = 1}    
+           x[myIndex-1].style.display = "block";  
+           setTimeout(carousel, 4000);    
+         }
+         
+         // Used to toggle the menu on small screens when clicking on the menu button
+         function myFunction() {
+           var x = document.getElementById("navDemo");
+           if (x.className.indexOf("w3-show") == -1) {
+             x.className += " w3-show";
+           } else { 
+             x.className = x.className.replace(" w3-show", "");
+           }
+         }
+         
+         // When the user clicks anywhere outside of the modal, close it
+         var modal = document.getElementById('ticketModal');
+         window.onclick = function(event) {
+           if (event.target == modal) {
+             modal.style.display = "none";
+           }
+           
+         }
+
+         const items = document.querySelectorAll(".accordion button");
+
+         function toggleAccordion() {
+         const itemToggle = this.getAttribute('aria-expanded');
+         
+         for (i = 0; i < items.length; i++) {
+            items[i].setAttribute('aria-expanded', 'false');
+         }
+         
+         if (itemToggle == 'false') {
+            this.setAttribute('aria-expanded', 'true');
+         }
+         }
+
+         items.forEach(item => item.addEventListener('click', toggleAccordion));
+      </script>
+   </body>
+</html> 
